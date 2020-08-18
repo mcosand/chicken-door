@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div(class='centering')
+    button(id='open' onClick="handleButton('open');") 
+      span Open
+    button(id='close' onClick="handleButton('close');")
+      span Close
+    button(id='stop' onClick="handleButton('stop');")
+      span Stop
+  script.
+    updateButtons(!{JSON.stringify(state)});
